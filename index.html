@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- VUE JS -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="app">
+        <label for="username">Ciao utente dimmi come ti chiami</label>
+        <input type="text" id="username" v-model="username">
+        <button @click="sayHello">Invia</button>
+        <h1>{{ greetings }} {{ username}}!</h1>
+        <button @click="showPicture">Clicca per visualizzare l'immagine</button>
+        <img :class="imageClass" :src="imageSrc" alt="">
+    </div>
+   <!-- JS  -->
+   <script src="js/script.js"></script>
+</body>
+</html>
